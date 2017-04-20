@@ -21,6 +21,15 @@
             link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
             document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
+
+        <style>
+            .center-vertical {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+        </style>
     </head>
     <body>
         <img id="avisi-logo" src="img/avisi.png" alt="Avisi logo" />
@@ -32,7 +41,256 @@
                         <small>by Fatih Demir</small>
                     </p>
                 </section>
-                <section>Slide 2</section>
+                <section>
+                    <h2>Most of my issues with CSS</h2>
+
+                    <ul>
+                        <li>Constants</li>
+                        <li>Vendor prefixes</li>
+                        <li>CSS hacks</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Preprocessors</h2>
+
+                    <div class="center-vertical">
+                        <img src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" width="300px" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LESS_Logo.svg/1200px-LESS_Logo.svg.png" width="300px" />
+                        <img src="https://ucarecdn.com/4264710f-8cf0-4d72-8be9-61ee17823389/" width="300px" />
+                    </div>
+
+                    <p>and others..</p>
+
+                </section>
+                <section>
+                    <h2>Horizontal alignment</h2>
+                    <p>Let's position a div inside another div <em>horizontally</em>..</p>
+                </section>
+                <section>
+                    <h2>Horizontal alignment</h2>
+                    <img src="img/horizontal-alignment-question.png" />
+                </section>
+                <section>
+                    <h2>Horizontal alignment</h2>
+                    <img src="img/horizontal-alignment-answer.png" />
+                </section>
+                <section>
+                    <h2>Vertical alignment</h2>
+                    <p>Let's position a div inside another div <em>vertically</em>..............</p>
+                    <img class="fragment" src="img/kevin-mccallister.jpg" />
+                </section>
+                <section>
+                    <h2>Vertical alignment</h2>
+                    <img src="img/vertical-alignment-tldr.png" />
+                </section>
+                <section>
+                    <h2>Why can't it be easy?</h2>
+                    <img src="https://img.memesuper.com/1f3612edfd185ebe0c00a7663a1d2354_share-css-memes_500-281.gif" />
+                </section>
+                <section>
+                    <h2>Flexbox</h2>
+                    <p>Positioning your elements in modern web apps without pulling your hairs out.</p>
+                </section>
+                <section>
+                    <h2>Flexbox</h2>
+                    <p>Designed for laying out more complex applications and webpages.</p>
+                    <p>Gives flex containers the ability to manipulate it's contents based on the available space.</p>
+                </section>
+                <section>
+                    <h2>Flexbox</h2>
+                    <p>Demo horizontal/vertical alignment.</p>
+                </section>
+                <section>
+                    <h2>Flex container</h2>
+                    <pre><code data-trim data-noescape>
+                    /* Flex container as a block element */
+                    display: flex;
+
+                    /* Flex container as an inline element */
+                    display: inline-flex;
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Flex container</h2>
+                    <p>One dimensional. Either horizontal or vertical.</p>
+                    <p>Ability to manipulate positioning in both axis.</p>
+                    <pre><code data-trim data-noescape>flex-direction: row; /* default, aligns horizontally.*/</code></pre>
+                </section>
+                <section>
+                    <h2>Flex container</h2>
+                    <img src="img/flex-container-explanation.png" />
+                </section>
+                <section>
+                    <h2>Flex container</h2>
+                    <pre><code data-trim data-noescape>justify-content: flex-start; /* main axis */</code></pre>
+                    <pre><code data-trim data-noescape>align-items: flex-start; /* cross axis */</code></pre>
+                </section>
+                <section>
+                    <h2>Flex direction</h2>
+                    <pre><code data-trim data-noescape>flex-direction: row; /* default */</code></pre>
+                    <pre><code data-trim data-noescape>flex-direction: row-reverse; /* also works with column */</code></pre>
+                    <img src="img/flex-direction.png" />
+                </section>
+                <section>
+                    <h2>Flex wrap</h2>
+                    <pre><code data-trim data-noescape>flex-wrap: wrap;</code></pre>
+                    <img src="img/flex-wrap.png" />
+                    <pre><code data-trim data-noescape>align-content: stretch;</code></pre>
+                </section>
+                <section>
+                    <h2>Flex items</h2>
+                    <p>Direct children only</p>
+                    <p>Able to nest flex-containers however.</p>
+                </section>
+                <section>
+                    <h2>Order</h2>
+                    <pre><code data-trim data-noescape>order: 0; /* default */</code></pre>
+                </section>
+                <section>
+                    <h2>Flex-grow</h2>
+                    <pre><code data-trim data-noescape>flex-grow: 0; /* default */</code></pre>
+                    <img src="img/flex-grow.png" />
+                </section>
+                <section>
+                    <h2>Flex-shrink</h2>
+                    <pre><code data-trim data-noescape>flex-shrink: 1; /* default */</code></pre>
+                </section>
+                <section>
+                    <h2>Flex-basis</h2>
+                    <pre><code data-trim data-noescape>flex-basis: auto | length; /* default auto */</code></pre>
+                </section>
+                <section>
+                    <h2>Shorthands</h2>
+                    <pre><code data-trim data-noescape>flex: 0 1 auto; /* flex-grow flex-shrink flex-basis */</code></pre>
+                    <pre><code data-trim data-noescape>flex-flow: row nowrap; /* flex-direction flex-wrap */</code></pre>
+                </section>
+                <section>
+                    <h2>Demo</h2>
+                    <img src="img/show-me-demo.jpg" />
+                </section>
+                <section>
+                    <h2>Browser support</h2>
+                    <p><a href="http://caniuse.com/#search=flexbox">http://caniuse.com/#search=flexbox</a></p>
+                    <img src="img/flexbox-support.png" />
+                </section>
+                <section>
+                    <h2>Flexbox issues</h2>
+                    <p>Excellent resource for flexbox issues and cross-browser workarounds.</p>
+                    <p><a href="https://github.com/philipwalton/flexbugs">https://github.com/philipwalton/flexbugs</a></p>
+                </section>
+                <section>
+                    <h2>Learn more</h2>
+                    <p><a href="https://www.w3.org/TR/css-flexbox-1/#propdef-flex-wrap">https://www.w3.org/TR/css-flexbox-1/#propdef-flex-wrap</a></p>
+                    <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+                </section>
+                <section>
+                    <h2>Questions so far about flexbox?</h2>
+                </section>
+                <section>
+                    <h2>CSS Grid</h2>
+                </section>
+                <section>
+                    <h2>CSS Grid</h2>
+                    <p>Grid based two-dimensional layout.</p>
+                    <p>Works great in combination with flexbox</p>
+                    <p>There is no Flexbox vs Grid. They are friends!!</p>
+                </section>
+                <section>
+                    <h2>Browser support</h2>
+                    <p><a href="http://caniuse.com/#search=grid">http://caniuse.com/#search=grid</a></p>
+                    <img src="img/grid-support.png" />
+                </section>
+                <section>
+                    <h2>Let's get ready for Grid</h2>
+                    <img src="img/css-grid-is-coming.jpg" />
+                </section>
+                <section>
+                    <h2>Grid line</h2>
+                    <img src="img/grid-line.png" />
+                </section>
+                <section>
+                    <h2>Grid cell</h2>
+                    <img src="img/grid-cell.png" />
+                </section>
+                <section>
+                    <h2>Grid track</h2>
+                    <img src="img/grid-track.png" />
+                </section>
+                <section>
+                    <h2>Grid area</h2>
+                    <img src="img/grid-area.png" />
+                </section>
+                <section>
+                    <h2>Demo</h2>
+                    <p>Let's build a simple application with CSS grid together</p>
+                </section>
+                <section>
+                    <h2>Grid container</h2>
+                    <pre><code data-trim data-noescape>display: grid | inline-grid | subgrid;</code></pre>
+                </section>
+                <section>
+                    <h2>Grid template rows/columns</h2>
+                    <pre><code data-trim data-noescape>grid-template-rows: 10px 10% auto 5% 5px;</code></pre>
+                    <pre><code data-trim data-noescape>grid-template-columns: 1fr 1fr; /* repeat(2, 1fr) */</code></pre>
+                    <pre><code data-trim data-noescape>grid-template-columns: [col-1-custom-name] 1fr [end-col-1];</code></pre>
+                </section>
+                <section>
+                    <h2>Grid template areas</h2>
+                    <pre><code data-trim data-noescape>.item-a { grid-area: header; }
+.item-b { grid-area: main; }
+.item-c { grid-area: sidebar; }
+.item-d { grid-area: footer; }
+
+.container {
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}</code></pre>
+                </section>
+                <section>
+                    <h2>Grid gaps</h2>
+                    <pre><code data-trim data-noescape>grid-column-gap: size;</code></pre>
+                    <pre><code data-trim data-noescape>grid-row-gap: size;</code></pre>
+                    <pre><code data-trim data-noescape>grid-gap: size size; /* 1 size for both or 2 sizes */</code></pre>
+                </section>
+                <section>
+                    <h2>Aligning</h2>
+                    <pre><code data-trim data-noescape>justify-items: stretch; /* start | end | center */</code></pre>
+                    <pre><code data-trim data-noescape>align-items: stretch; /* Same as above */</code></pre>
+                    <pre><code data-trim data-noescape>justify-content: stretch; /* space-around -between & -evenly */</code></pre>
+                    <pre><code data-trim data-noescape>align-content: stretch; /* Same as above */</code></pre>
+                </section>
+                <section>
+                    <h2>Grid is awesome however</h2>
+                    <p>Not production ready..</p>
+                </section>
+                <section>
+                    <h2>Learn more</h2>
+                    <p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a></p>
+                    <p><a href="https://www.w3.org/TR/css3-grid-layout/">https://www.w3.org/TR/css3-grid-layout/</a></p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid">https://developer.mozilla.org/en-US/docs/Glossary/Grid</a></p>
+                    <p><a href="http://gridbyexample.com/">http://gridbyexample.com/</a></p>
+                </section>
+                <section>
+                    <h2>Questions about CSS Grid?</h2>
+                </section>
+                <section>
+                    <h2>Might need to enable flags in your browser for CSS Grid</h2>
+                    <p><a href="https://igalia.github.io/css-grid-layout/enable.html">https://igalia.github.io/css-grid-layout/enable.html</a></p>
+                </section>
+                <section>
+                    <h2>Slides on Github</h2>
+                    <p><a href="https://github.com/fatihict/modern-css-techday-presentation">https://github.com/fatihict/modern-css-techday-presentation</a></p>
+                </section>
+                <section>
+                    <h2>Handson</h2>
+                    <p>Pick a website (preferably one you've built yourself before) and create the same layout using CSS grid and flexbox.</p>
+                    <p>Try making it responsive even if the original isn't.</p>
+                    <p>Bonus: no floats, clears, tables & vertical-align.</p>
+                </section>
             </div>
         </div>
 
